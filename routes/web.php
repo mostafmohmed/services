@@ -45,6 +45,8 @@ Route::prefix('/admin/')->name('admin')->group(
             Route::view('subsqruber','admin.subsqruber.index');
             Route::view('counter','admin.counter.indexx');
             Route::view('service','admin.servic.index');
+            Route::view('massage','admin.massage.index');
+            Route::view('project','admin.progect.index');
             
 
         } );

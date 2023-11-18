@@ -9,24 +9,24 @@
                 <thead>
                     <tr>
                         <th width="45%">name</th>
-                        <th width="45%">subject</th>
+                        <th width="45%">link</th>
                         <th width="45%">massage</th>
-                        <th width="45%">email</th>
-                        <th width="45%">status</th>
+                        <th width="45%">image</th>
+                        <th width="45%">catagory</th>
                         
                         <th>Actions</th>
                     </tr>
                 </thead>
                 <tbody class="table-border-bottom-0">
-                    @foreach ($data as $massage)
+                    @foreach ($data as $project)
                         <tr>
                             <td>
-                                <strong>{{ $massage->name }}</strong>
+                                <strong>{{ $project->name }}</strong>
                             </td>
-                            <td>{{ $massage->subject }}</td>
-                            <td>{{ $massage->massage }}</td>
-                            <td>{{ $massage->email   }}</td>
-                            <td>{{ $massage->status== '0' ?'nosee':'see'  }}</td>
+                            <td>{{ $project->name }}</td>
+                            <td>{{ $project->link }}</td>
+                            <td>{{ $project->image   }}</td>
+                            <td>{{ $project->catagory->name }}</td>
                             
                             <td>
                                 <div class="dropdown">
@@ -37,17 +37,17 @@
                                     <div class="dropdown-menu">
                                         {{-- <a class="dropdown-item" href="#"    
                                      
-                                            wire:click.prevent="$dispatch('servicUpdate', { id: {{ $massage->id }} })">
+                                            wire:click.prevent="$dispatch('servicUpdate', { id: {{ $project->id }} })">
                                             <i class="bx bx-edit-alt me-1"></i>
                                             Edit
                                         </a>
                                         <a class="dropdown-item" href="#"
-                                            wire:click.prevent="$dispatch('serviceDelete', { id: {{ $massage->id }} })">
+                                            wire:click.prevent="$dispatch('serviceDelete', { id: {{ $project->id }} })">
                                             <i class="bx bx-trash me-1"></i>
                                             Delete
                                         </a> --}}
                                         <a class="dropdown-item" href="#"
-                                            wire:click.prevent="$dispatch('massageShow', { id: {{ $massage->id }} })">
+                                            wire:click.prevent="$dispatch('massageShow', { id: {{ $project->id }} })">
                                             <i class="bx bx-trash me-1"></i>
                                             Show
                                         </a>

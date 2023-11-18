@@ -5,9 +5,8 @@ namespace App\Models;
 use Illuminate\Database\Eloquent\Factories\HasFactory;
 use Illuminate\Database\Eloquent\Model;
 
-class Massage extends Model
+class Progect extends Model
 {
-    protected $fillable =[   'status'];
-  
+    protected $table='progects';
     use HasFactory;
 }

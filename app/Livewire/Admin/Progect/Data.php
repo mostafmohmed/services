@@ -1,14 +1,14 @@
 <?php
 
-namespace App\Livewire\Admin\Massage;
+namespace App\Livewire\Admin\Progect;
 
-use App\Models\Massage;
+use App\Models\Project;
 use Livewire\Component;
 use Livewire\WithPagination;
 
-class MassageData extends Component
+class Data extends Component
 {
-
+    
     use WithPagination;
     protected $listeners = ['refreshData' => '$refresh'];
 
@@ -20,6 +20,6 @@ class MassageData extends Component
     }
     public function render()
     {
-        return view('admin.massage.massage-data',['data' => Massage::where('name', 'like', '%' . $this->search . '%')->paginate(10)]);
+        return view('admin.progect.data',['data' => Project::where('name', 'like', '%' . $this->search . '%')->paginate(10)]);
     }
 }

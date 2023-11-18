@@ -5,9 +5,11 @@ namespace App\Models;
 use Illuminate\Database\Eloquent\Factories\HasFactory;
 use Illuminate\Database\Eloquent\Model;
 
-class Massage extends Model
+class Catagory extends Model
 {
-    protected $fillable =[   'status'];
-  
+    public function project(){
+        return $this->hasMany(Project::class);
+    }
+    protected $table='catagories';
     use HasFactory;
 }
